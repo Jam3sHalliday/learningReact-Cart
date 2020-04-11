@@ -5,7 +5,9 @@ export default class CartItem extends Component {
     render() {
         let { item } = this.props;
         let { quantity } = item;
-        console.log(quantity)
+        console.log(item.product);
+        console.log(quantity);
+
         return (
             <tr>
                 <th scope="row">
@@ -20,14 +22,12 @@ export default class CartItem extends Component {
                 <td className="center-on-small-only">
                     <span className="qty">{quantity}</span>
                     <div className="btn-group radio-group" data-toggle="buttons">
-                    <label className="btn btn-sm btn-primary
-                                            btn-rounded waves-effect waves-light"
+                    <label className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
                         onClick = { () => this.onUpdateQuantity(item.product, item.quantity - 1) }                      
                     >
                         <a>—</a>
                     </label>
-                    <label className="btn btn-sm btn-primary
-                                            btn-rounded waves-effect waves-light"
+                    <label className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
                         onClick = { () => this.onUpdateQuantity(item.product, item.quantity + 1) }                      
 
                     >

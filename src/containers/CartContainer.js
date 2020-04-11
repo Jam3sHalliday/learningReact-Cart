@@ -12,6 +12,7 @@ import { actionRemoveProductInCart, actionChangeMessage, actionUpdateProductInCa
 class CartContainer extends Component {   
     render() {
         let { cart } = this.props;
+
         return (
             <Cart>
                 { this.showCartItem(cart) }
